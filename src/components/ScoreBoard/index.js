@@ -19,7 +19,7 @@ const ScoreBoard = props => {
       </ScoreBoardItemsCon>
       <ScoreHeadingAndScore>
         <ScoreHeading>Score</ScoreHeading>
-        <Score>0</Score>
+        <Score>{score}</Score>
       </ScoreHeadingAndScore>
     </ScoreCon>
   )

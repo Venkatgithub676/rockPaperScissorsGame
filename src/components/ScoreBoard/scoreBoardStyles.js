@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const ScoreCon = styled.h1`
+export const ScoreCon = styled.div`
   height: 150px;
   border-radius: 10px;
   border: 1px solid #ffffff;
@@ -10,7 +10,7 @@ export const ScoreCon = styled.h1`
   justify-content: space-between;
   padding: 50px;
 `
-export const ScoreBoardItemsCon = styled.h1`
+export const ScoreBoardItemsCon = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
