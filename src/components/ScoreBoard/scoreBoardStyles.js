@@ -5,6 +5,7 @@ export const ScoreCon = styled.div`
   border-radius: 10px;
   border: 1px solid #ffffff;
   width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,7 +30,7 @@ export const ScoreHeadingAndScore = styled.div`
   border-radius: 10px;
   padding: 10px;
 `
-export const ScoreHeading = styled.h1`
+export const ScoreHeading = styled.p`
   font-family: 'Bree Serif';
   font-size: 20px;
   color: #223a5f;
@@ -38,11 +39,13 @@ export const ScoreHeading = styled.h1`
   margin-top: 0px;
 `
 
-export const Score = styled.h1`
-  font-family: 'Bree Serif';
+export const Score = styled.p`
+  font-family: 'Roboto';
   font-size: 50px;
   color: #223a5f;
   margin-top: 0px;
   margin-bottom: 0px;
   text-align: center;
 `
+
+export const BreakEl = styled.br``

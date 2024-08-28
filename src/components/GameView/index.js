@@ -94,10 +94,26 @@ class GameView extends Component {
             const clickBtn = () => {
               this.onClickGameBtn(id)
             }
+            let val
+            switch (id) {
+              case 'ROCK':
+                val = 'rockButton'
+                break
+              case 'PAPER':
+                val = 'paperButton'
+                break
+              case 'SCISSORS':
+                val = 'scissorsButton'
+                break
+              default:
+                val = null
+                break
+            }
+            console.log(val)
             return (
               <ChoicesLiItem key={id}>
-                <Buttons type="button" onClick={clickBtn}>
-                  <ImgEl src={imageUrl} />
+                <Buttons type="button" data-testid={val} onClick={clickBtn}>
+                  <ImgEl src={imageUrl} alt={id} />
                 </Buttons>
               </ChoicesLiItem>
             )
@@ -127,12 +143,15 @@ class GameView extends Component {
         <OpponentSelfCon>
           <NamesCon>
             <Names>YOU</Names>
-            <ResultImg src={choicesList[activeId].imageUrl} />
+            <ResultImg alt="your choice" src={choicesList[activeId].imageUrl} />
           </NamesCon>
 
           <NamesCon>
             <Names>OPPONENT</Names>
-            <ResultImg src={choicesList[randomId].imageUrl} />
+            <ResultImg
+              alt="opponent choice"
+              src={choicesList[randomId].imageUrl}
+            />
           </NamesCon>
         </OpponentSelfCon>
         <ResultStatus>{status}</ResultStatus>
@@ -158,7 +177,10 @@ class GameView extends Component {
               <CloseButton onClick={() => close()}>
                 <RiCloseLine fontSize={20} />
               </CloseButton>
-              <RulesImg src="https://assets.ccbp.in/frontend/react-js/rock-paper-scissor/rules-image.png" />
+              <RulesImg
+                src="https://assets.ccbp.in/frontend/react-js/rock-paper-scissor/rules-image.png"
+                alt="rules"
+              />
             </PopupBgCon>
           )}
         </Popup>

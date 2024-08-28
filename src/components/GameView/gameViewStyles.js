@@ -1,8 +1,11 @@
 import styled from 'styled-components'
 
 export const GameBgCon = styled.div`
-  min-height: 100vh;
   padding: 0px 100px 0px 100px;
+
+  @media screen and (max-width: 576px) {
+    padding: 0px 30px 0px 30px;
+  }
 `
 
 export const WrapperConUl = styled.div`
@@ -11,16 +14,20 @@ export const WrapperConUl = styled.div`
   align-items: center;
 `
 export const ChoicesUlCon = styled.ul`
-  list-style-type: none;
   padding: 0;
   width: 50%;
   margin-top: 100px;
   display: flex;
+
   justify-content: center;
   flex-wrap: wrap;
+  @media screen and (max-width: 576px) {
+    width: 70%;
+  }
 `
 
 export const ChoicesLiItem = styled.li`
+  list-style-type: none;
   width: 50%;
 `
 export const Buttons = styled.button`
@@ -32,12 +39,19 @@ export const Buttons = styled.button`
 
 export const ImgEl = styled.img`
   width: 100%;
+  @media screen and (max-width: 576px) {
+    width: 80%;
+  }
 `
 export const GameBg = styled.div`
   padding: 40px;
   background-color: #223a5f;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  @media screen and (max-width: 576px) {
+    padding: 10px;
+  }
 `
 
 export const RulesBtn = styled.button`
@@ -51,6 +65,7 @@ export const RulesBtn = styled.button`
   font-family: 'Bree Serif';
   font-weight: 500;
   cursor: pointer;
+  margin-top: 60px;
 `
 
 export const PopupBgCon = styled.div`
@@ -61,6 +76,10 @@ export const PopupBgCon = styled.div`
   flex-direction: column;
   background-color: #ffffff;
   align-items: flex-end;
+  @media screen and (max-width: 576px) {
+    padding: 10px;
+    height: 400px;
+  }
 `
 export const RulesImg = styled.img`
   width: 100%;
@@ -83,6 +102,9 @@ export const ResultCon = styled.div`
   width: 50%;
 
   margin-top: 50px;
+  @media screen and (max-width: 576px) {
+    width: 80%;
+  }
 `
 export const OpponentSelfCon = styled.div`
   width: 100%;
@@ -102,24 +124,16 @@ export const Names = styled.h1`
   color: #ffffff;
 `
 
-export const ResultStatus = styled.h1`
+export const ResultStatus = styled.p`
   font-family: 'Roboto';
   color: #ffffff;
 `
 
-export const PlayAgainBtn = styled.button`
-  width: 100px;
-  height: 35px;
-  background-color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  color: #223a5f;
-
-  font-family: 'Bree Serif';
-  font-weight: 500;
-  cursor: pointer;
+export const PlayAgainBtn = styled(RulesBtn)`
+  margin-top: 0;
+  align-self: center;
 `
 
 export const ResultImg = styled(ImgEl)`
-  width: 200px;
+  width: 80%;
 `

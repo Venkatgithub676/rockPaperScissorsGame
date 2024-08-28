@@ -4,6 +4,7 @@ import {
   HeadingElements,
   ScoreHeadingAndScore,
   Score,
+  BreakEl,
   ScoreHeading,
 } from './scoreBoardStyles'
 
@@ -13,9 +14,9 @@ const ScoreBoard = props => {
   return (
     <ScoreCon>
       <ScoreBoardItemsCon>
-        <HeadingElements>Rock</HeadingElements>
-        <HeadingElements>Paper</HeadingElements>
-        <HeadingElements>Scissors</HeadingElements>
+        <HeadingElements>
+          Rock <BreakEl /> Paper <BreakEl /> Scissors{' '}
+        </HeadingElements>
       </ScoreBoardItemsCon>
       <ScoreHeadingAndScore>
         <ScoreHeading>Score</ScoreHeading>
