@@ -12,6 +12,8 @@ export const WrapperConUl = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 400px;
+  margin-top: 50px;
 `
 export const ChoicesUlCon = styled.ul`
   padding: 0;
@@ -21,6 +23,7 @@ export const ChoicesUlCon = styled.ul`
 
   justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
   @media screen and (max-width: 576px) {
     width: 70%;
   }
@@ -29,6 +32,10 @@ export const ChoicesUlCon = styled.ul`
 export const ChoicesLiItem = styled.li`
   list-style-type: none;
   width: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 export const Buttons = styled.button`
   background-color: transparent;
@@ -48,7 +55,7 @@ export const GameBg = styled.div`
   background-color: #223a5f;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   @media screen and (max-width: 576px) {
     padding: 10px;
   }
@@ -101,9 +108,8 @@ export const ResultCon = styled.div`
   align-items: center;
   width: 50%;
 
-  margin-top: 50px;
   @media screen and (max-width: 576px) {
-    width: 80%;
+    width: 100%;
   }
 `
 export const OpponentSelfCon = styled.div`
@@ -122,6 +128,7 @@ export const NamesCon = styled.div`
 export const Names = styled.h1`
   font-family: 'Roboto';
   color: #ffffff;
+  font-size: 25px;
 `
 
 export const ResultStatus = styled.p`
@@ -135,5 +142,5 @@ export const PlayAgainBtn = styled(RulesBtn)`
 `
 
 export const ResultImg = styled(ImgEl)`
-  width: 80%;
+  width: 60%;
 `
